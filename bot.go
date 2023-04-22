@@ -114,7 +114,7 @@ func handleSumAll(event *linebot.Event) {
 	}
 
 	// 訊息內先回，再來總結。
-	if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("好的，總結文字已經發給您了"+userName)).Do(); err != nil {
+	if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("總結文字已發送"+userName)).Do(); err != nil {
 		log.Print(err)
 	}
 
